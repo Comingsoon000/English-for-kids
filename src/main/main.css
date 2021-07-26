@@ -1,0 +1,264 @@
+.main {
+  margin-top: 110px;
+  left: 0;
+  padding-left: 215px;
+  padding-right: 215px;
+}
+
+.main_hidden {
+  display: none;
+}
+
+.loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+}
+
+.main__stars-wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap-reverse;
+  height: 50px;
+  margin-top: -20px;
+  overflow-x: hidden;
+}
+
+.main__star,
+.main__star_win {
+  width: 50px;
+  height: 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.main__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-left: 0;
+  list-style: none;
+}
+
+.main__item {
+  width: 280px;
+  height: 280px;
+  margin: 10px;
+  position: relative;
+  border-radius: 30px;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.main__item-front, 
+.main__item-back {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  backface-visibility: hidden;
+}
+
+.main__item-front {
+  z-index: 2;
+}
+
+.main__item-back {
+  transform: rotateY(180deg)
+}
+
+.main__item-back_hidden {
+  display: none;
+}
+
+.flip {
+  transform: rotateY(180deg);
+}
+
+.main__item-image,
+.main__item-image_train,
+.main__item-image_play {
+  width: 240px;
+  height: 210px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 30px;
+  border: 3px solid #000000;
+}
+
+.main__item-image_play {
+  width: 280px;
+  height: 280px;
+  box-sizing: border-box;
+}
+
+.main__item-bot,
+.main__item-bot_train {
+  position: relative;
+  width: 280px;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.main__item-bot_play {
+  display: none;
+}
+
+.main__item-text {
+  color: #000000;
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.main__item-rotate-btn {
+  position: absolute;
+  right: 10px;
+}
+
+.main__item-rotate-btn_hidden {
+  display: none;
+}
+
+.main__item-rotate-btn:hover{
+  fill: #f33405;
+}
+
+.main__category_train,
+.main__card_train {
+  background-color: #e09f12;
+}
+
+.main__category_train:hover,
+.main__card_train:hover {
+  box-shadow: 0 0 10px 10px #ec7c59;
+}
+
+.main__category_play,
+.main__card_play {
+  background-color: #ec7c59;
+}
+
+.main__category_play:hover,
+.main__card_play:hover {
+  box-shadow: 0 0 10px 10px #7880f0;
+}
+
+.main__play-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 180px;
+  height: 50px;
+  margin: 10px auto;
+  font-size: 25px;
+  font-weight: 900;
+  text-transform: uppercase;
+  background-color: #def078;
+  border-radius: 30px;
+  border: 3px solid #000000;
+  cursor: pointer;
+}
+
+.main__repeat-btn {
+  width: 60px;
+  height: 60px;
+  margin: 10px auto;
+  background-color: #ec7c59;
+  background-position: center;
+  background-size: 54px 54px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.main__play-btn:hover,
+.main__repeat-btn:hover {
+  box-shadow: 0 0 10px 10px #ec7c59;
+}
+
+.main__empty-text {
+  font-size: 30px;
+  font-weight: 900;
+  text-align: center;
+  color: #000000;
+}
+
+.main__play-btn_hidden,
+.main__repeat-btn_hidden,
+.main__empty-text_hidden  {
+  display: none;
+}
+
+.disabled {
+  filter: blur(8px);
+  pointer-events: none;
+}
+
+.bot-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc(100vh - 110px);
+  margin-top: 110px;
+  background-color: #ffffff;
+}
+
+.failure,
+.success {
+  display: flex;
+  justify-content: center;
+  max-width: 1000px;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.failure-text {
+  margin-top: 30px;
+  font-size: 40px;
+}
+
+.bot-wrapper_hidden,
+.failure_hidden,
+.success_hidden {
+  display: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .main {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .main {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media screen and (max-width: 335px) {
+  .main {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

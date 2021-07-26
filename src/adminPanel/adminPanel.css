@@ -1,0 +1,414 @@
+.admin-modal__cover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #24232370;
+  z-index: 1;
+}
+
+.admin-modal {
+  position: fixed;
+  top: 30vh;
+  left: 20vw;
+  width: 60vw;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+  background-color: #ffffff;
+}
+
+.admin-modal__cover_hidden,
+.admin-modal_hidden {
+  display: none;
+}
+
+.admin-modal__title {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.admin-modal__inputs-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 25%;
+}
+
+.admin-modal__login-label,
+.admin-modal__password-label,
+.admin-modal__login,
+.admin-modal__password {
+  width: 100%;
+  height: 25%;
+  font-size: 15px;
+}
+.admin-modal__password-label {
+  margin-top: 10px;
+}
+
+.admin-modal__buttons-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 20%;
+  background-color: #4FBE79;
+}
+
+.admin-modal__cancel-btn,
+.admin-modal__login-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  height: 60%;
+  color: #ffffff;
+  border-radius: 5px;
+  background-color: #4FBE79;
+  border: 2px solid #ffffff;
+  cursor: pointer;
+}
+
+.admin-modal__login-btn:hover {
+  background-color: #173b25
+}
+
+.admin-modal__cancel-btn {
+  background-color: #E53935;
+}
+
+.admin-modal__cancel-btn:hover {
+  background-color: #581413;
+}
+
+.admin {
+  width: 100%;
+}
+
+.loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+}
+
+.admin__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  background-color: #00BF82;
+}
+
+.admin__header-categories,
+.admin__header-words,
+.admin__header-logout {
+  font-size: 18px;
+  font-weight: 900;
+  color: #ffffff;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.admin__header-categories:hover,
+.admin__header-words:hover,
+.admin__header-logout:hover {
+  color: #000000;
+}
+
+.admin__header-categories {
+  margin-left: 30px;
+}
+
+.admin__header-logout {
+  margin-right: 30px;
+}
+
+.admin__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.admin__category,
+.admin__new-category,
+.admin__category-update,
+.admin__new-category-create {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 280px;
+  height: 200px;
+  margin: 10px;
+  position: relative;
+  border: solid 2px #000000;
+}
+
+.admin__words_hidden,
+.admin__words-update_hidden,
+.admin__new-word_hidden,
+.admin__new-word-create_hidden,
+.admin__new-category-create_hidden,
+.admin__new-category_hidden,
+.admin__category-update_hidden,
+.admin__category_hidden {
+  display: none;
+}
+
+.admin__words-del-btn,
+.admin__category-del-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+.admin__new-category-name,
+.admin__category-name {
+  overflow-y: visible;
+  margin-top: 20px;
+}
+
+.admin__category-words {
+  margin-top: 30px;
+}
+
+.admin__new-category-create-wrapper,
+.admin__category-update-wrapper,
+.admin__category-bot-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin-top: 30px;
+}
+
+.admin__new-category-create-label,
+.admin__category-update-label {
+  margin-top: 50px;
+  width: 80%;
+  font-size: 14px;
+}
+
+.admin__new-category-create-input,
+.admin__category-update-input {
+  width: 80%;
+  height: 30px;
+  font-size: 20px;
+}
+
+.admin__words-create-cancel-btn,
+.admin__words-create-create-btn,
+.admin__words-update-update-btn,
+.admin__words-update-cancel-btn,
+.admin__words-change-brn,
+.admin__new-category-create-create-btn,
+.admin__new-category-create-cancel-btn,
+.admin__category-update-cancel-btn,
+.admin__category-update-create-btn,
+.admin__category-update-btn,
+.admin__category-add-word-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 30px;
+  color: #018057;
+  border: 2px solid #018057;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.admin__words-create-create-btn:hover,
+.admin__words-update-update-btn:hover,
+.admin__words-change-brn:hover,
+.admin__new-category-create-create-btn:hover,
+.admin__category-update-create-btn:hover,
+.admin__category-update-btn:hover,
+.admin__category-add-word-btn:hover {
+  color: #000000;
+  border-color: #000000;
+  background-color: #00BF82;
+}
+
+.admin__new-category-add-btn {
+  width: 90px;
+  height: 90px;
+  margin-top: 25px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.admin__words-create-cancel-btn,
+.admin__words-update-cancel-btn,
+.admin__new-category-create-cancel-btn,
+.admin__category-update-cancel-btn {
+  color: #E53935;
+  border-color: #E53935;
+}
+
+.admin__words-create-cancel-btn:hover,
+.admin__words-update-cancel-btn:hover,
+.admin__new-category-create-cancel-btn:hover,
+.admin__category-update-cancel-btn:hover {
+  color: #9e0604;
+  border-color: #9e0604;
+}
+
+.admin__category-name {
+  width: 280px;
+  margin: 40px auto 0;
+  font-size: 20px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.admin__words-update,
+.admin__words,
+.admin__new-word-create,
+.admin__new-word{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 280px;
+  height: 450px;
+  margin: 10px;
+  position: relative;
+  border: solid 2px #000000;
+}
+
+.admin__words-create-word-label,
+.admin__words-update-word-label,
+.admin__words-image-text,
+.admin__words-sound,
+.admin__words-translation,
+.admin__words-word{
+  margin-top: 20px;
+  width: 240px;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+.admin__words-sound{
+  display: flex;
+  justify-content: space-between;
+}
+
+.admin__words-sound-play-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 20px;
+  color: #018057;
+  border: 2px solid #018057;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.admin__words-sound-play-btn:hover {
+  color: #000000;
+  border-color: #000000;
+  background-color: #00BF82;
+}
+
+.admin__words-image {
+  width: 240px;
+  height: 160px;
+  margin-top: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: solid 1px #000000;
+}
+
+.admin__words-change-brn {
+  margin: auto 0;
+}
+
+.admin__new-word-text {
+  margin-top: 20px;
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.admin__new-word-add-btn {
+  width: 120px;
+  height: 120px;
+  margin-top: 120px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.admin__words-create-word-input,
+.admin__words-update-word-input {
+  margin-top: 5px;
+  width: 240px;
+  font-size: 18px;
+}
+
+.admin__words-update-wrapper,
+.admin__words-create-wrapper {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 240px;
+  font-size: 18px;
+}
+
+
+.admin__words-create-bot-wrapper,
+.admin__words-update-bot-wrapper,
+.admin__words-update-bot-wrapper {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 240px;
+  font-size: 18px;
+}
+
+.admin__words-create-image-input,
+.admin__words-create-sound-input,
+.admin__words-create-sound-text,
+.admin__words-create-image-text,
+.admin__words-update-sound-input,
+.admin__words-update-image-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 240px;
+  height: 22px;
+  margin-top: 10px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.admin__words-create-bot-wrapper,
+.admin__words-update-bot-wrapper {
+  margin-top: 60px;
+}

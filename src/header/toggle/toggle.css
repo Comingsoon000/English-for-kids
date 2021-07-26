@@ -1,0 +1,73 @@
+.toggle {
+  background: #88715e;
+  border-radius: 30px;
+  overflow: hidden;
+  width: 140px;
+  text-align: center;
+  font-size: 17px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #FFFFFF;
+  position: relative;
+  padding-right: 65px;
+  box-sizing: border-box;
+}
+
+.toggle:before {
+  content: "play";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.toggle__checkbox {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 2;
+}
+
+.toggle__checkbox:checked + .toggle__label:before {
+  transform: translateX(65px);
+  transition: transform 300ms linear;
+}
+
+.toggle__label {
+  position: relative;
+  padding: 5px 0;
+  display: block;
+  user-select: none;
+  pointer-events: none;
+}
+
+.toggle__label:before {
+  content: "";
+  background: #06831b;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 30px;
+  transform: translateX(0);
+  transition: transform 300ms;
+}
+
+.toggle__text {
+  font-weight: 900;
+  text-transform: uppercase;
+  position: relative;
+}
